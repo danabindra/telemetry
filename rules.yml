@@ -1,0 +1,15 @@
+groups:
+- name: component_errors
+  rules:
+  - alert: ErrorDetected
+    expr: |
+      {component="loki.source.syslog"} |= "ERROR" and |= "syntax error"
+    for: 5m
+    labels:
+      severity: critical
+      component: "{{ $labels.component }}"
+      hostname: "{{ $labels.hostname }}"
+      ip_address: "{{ $labels.ip_address }}"
+    annotations:
+      summary: "Error Detected on {{ $labels.hostname }}: {{ $value }}"
+      description: "An error was detected in the logs of node '{{ $labels.hostname }}' from IP '{{ $labels.ip_address }}' at {{ $timestamp }}. Triggering line: {{ $value }}"
