@@ -21,8 +21,8 @@ receivers:
         *Component:* {{ .Labels.component }}
         *Hostname:* {{ .Labels.hostname }}
         *IP Address:* {{ .Labels.ip_address }}
-        *Triggered At:* {{ .StartsAt.Format "2006-01-02 15:04:05 MST" }}
-        *Grafana Logs:* <https://grafana.mia.tensorwaveops.com/explore?orgId=1&left=%5B"now-1h","now","{{ .Labels.component }}",%7B"expr":"{{ .Labels.component }}%5B1h%5D%7C=%22{{ .Annotations.description | urlquery }}%22%2C"ip_address":"{{ .Labels.ip_address }}"%2C"hostname":"{{ .Labels.hostname }}"%7D%2C"ui"%3A%7B"panelType"%3A"logs"%7D%5D>
+        *Triggered At:* {{ .StartsAt.Format "2006-01-02 15:04:05 PST" }}
+        *Grafana Logs:* <https://somecompany.com/explore?orgId=1&left=%5B"now-1h","now","{{ .Labels.component }}",%7B"expr":"{{ .Labels.component }}%5B1h%5D%7C=%22{{ .Annotations.description | urlquery }}%22%2C"ip_address":"{{ .Labels.ip_address }}"%2C"hostname":"{{ .Labels.hostname }}"%7D%2C"ui"%3A%7B"panelType"%3A"logs"%7D%5D>
         {{ end }}
       send_resolved: true
       # send_resolved: false
