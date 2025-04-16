@@ -1,0 +1,1 @@
+(avg by(instance) (irate(node_cpu_seconds_total{mode="user"}[1m])) * 100) * on(instance) group_left(hostname) role{role="Apache"}
