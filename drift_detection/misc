@@ -1,0 +1,24 @@
+Directories
+
+/var/lib/prometheus/node_exporter/textfile_collector/rocm_checks.prom 
+
+/demo/ansible-drift-check/playbooks
+
+curl -s http://10.x.x.x:9090/api/v1/targets | grep -A 5 node_exporter
+curl -s http://10.x.x.x:9090/-/healthy
+curl -s http://10.x.x.x:9090/api/v1/query?query=rocm_smi_installed
+curl -s http://10.x.x.x:9090/api/v1/query?query=rocm_smi_version_info
+curl -s "http://10.x.x.x:9090/api/v1/query?query=rocm_smi_version_info" | jq
+
+└── ansible-drift-check
+    └── playbooks
+        ├── drift.yml
+        ├── drift_test.yml
+        ├── inventory.yml
+        ├── rocm_drift_test.yml
+        ├── rocm_metrics_check.yml
+        ├── rocm_v1.yml
+        ├── rocm_v2.yml
+        ├── rocm_v3.yml
+        └── rocm_v4.yml
+
