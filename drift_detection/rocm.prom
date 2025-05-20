@@ -1,0 +1,19 @@
+# HELP rocm_smi_installed Whether rocm-smi is installed (1=yes, 0=no)
+# TYPE rocm_smi_installed gauge
+rocm_smi_installed 1
+
+# HELP rocm_smi_check_timestamp Unix timestamp of the last check
+# TYPE rocm_smi_check_timestamp gauge
+rocm_smi_check_timestamp 1747628314
+
+# HELP rocm_smi_gpu_available Whether GPU is detected by rocm-smi (1=yes, 0=no)
+# TYPE rocm_smi_gpu_available gauge
+rocm_smi_gpu_available 1
+
+# HELP rocm_smi_temperature_celsius GPU temperature in Celsius
+# TYPE rocm_smi_temperature_celsius gauge
+rocm_smi_temperature_celsius 
+
+# HELP rocm_smi_fan_speed_percent GPU fan speed percentage
+# TYPE rocm_smi_fan_speed_percent gauge
+rocm_smi_fan_speed_percent 0
