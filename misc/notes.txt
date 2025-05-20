@@ -1,1 +1,14 @@
     metrics_dir: /var/lib/prometheus/node-exporter/textfile_collector
+Commands:
+
+amd-smi list
+
+watch rocm-smi
+
+Run job
+/opt/rocm/bin/rvs
+PCI Addresses
+lspci -s a3:00
+
+
+
