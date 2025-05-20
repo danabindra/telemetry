@@ -1,0 +1,1 @@
+    metrics_dir: /var/lib/prometheus/node-exporter/textfile_collector
